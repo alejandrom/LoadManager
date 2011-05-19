@@ -136,7 +136,7 @@ package com.exileetiquette.loader
 			if (!id || id == "$_global") return _global;
 			else {
 				instance = _local[id];
-				if (!_local[id]) instance = new LoadManager(new LoadManagerSingletonEnforcer(), id);
+				if (!_local[id]) _local[id] = instance = new LoadManager(new LoadManagerSingletonEnforcer(), id);
 			}
 			
 			return instance;
